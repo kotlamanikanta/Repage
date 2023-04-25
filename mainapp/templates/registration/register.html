@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Create Your Account{% endblock %}
+{% block content %}
+    <!-- <h1>Create Your Account</h1>
+    <p>Please,sign up using the following form:</p>
+
+    <form method="post">
+        {{user_form.as_p}}
+        {% csrf_token %}
+        <p><input type="submit" value="Create My Account"></p>
+    </form> -->
+    <style>
+        h1 {
+        color: whitesmoke;
+        }
+        label {
+        color: white;
+        }
+    </style>
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-lg-6 mt-5">
+                <h6 class="text-light">Super Investment app</h6>
+                <h1 class="text-light">Get super analyzed ROI reports</h1>
+                <br><br>
+                <!-- <img src="../../static/css/OBJECTS.jpg" style="width:50%;"> -->
+                <img src="../../static/css/OBJECTS.png" style="width:50%;">
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div class="card">
+                    <div class="card-body" style="background-color: #1A1A1A;">
+                        <form action="{% url 'login' %}" method="post">
+                            <h1>Register to Real Returns.ai</h1>
+                            <h6 style="color: #fff;">Learn * Understand * Invest</h6>
+                            <form method="post">
+                                {% csrf_token %}
+                                {{user_form.as_p}}
+                                <div class="">
+                                    <input type="submit" class="form-control"  value="Create My Account">
+                                </div>
+                            </form> 
+                            <p>
+                                <button><a href="{% url 'register' %}">Register Now</a></button>
+                            </p>
+                        </form>
+                    </div>
+                  </div>
+                
+            </div>
+            <style>
+                h1{
+                    width:412px;
+                    height:112px;
+                    top:157.28px;
+                    left:694px;
+
+                }
+                .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border: 1px solid rgba(0,0,0,.125);
+                border-radius: 0.25rem;
+                }
+                h6{
+                    width: 205px;
+                    height: 19px;
+                    left: 700.65px;
+                    top: 289.08px;
+                    font-weight: 400;
+                    font-size: 15.5054px;
+                    line-height: 19px;
+                    /* identical to box height */
+                    display: flex;
+                    align-items: center;
+                }
+                button, input, optgroup, select, textarea {
+                    margin: 0;
+                    font-family: inherit;
+                    font-size: inherit;
+                    line-height: inherit;
+                }
+                ::placeholder{
+                    
+                }
+                
+            </style>
+{% endblock %}    
